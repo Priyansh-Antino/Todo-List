@@ -10,6 +10,10 @@ interface List {
 }
 
 /*
+    FullList represents the the whole todo list.
+*/
+
+/*
     This FullList class demonstrates a design pattern called the Singleton Pattern.
 
     **Key Concepts**:

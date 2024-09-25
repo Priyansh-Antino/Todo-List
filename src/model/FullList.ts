@@ -55,7 +55,7 @@ export default class FullList implements List {
   private constructor(private _list: ListItem[] = []) {}
 
   get list(): ListItem[] {
-    return this.list;
+    return this._list;
   }
 
   load(): void {

@@ -21,15 +21,15 @@ interface List {
     1. Singleton Pattern:
     => The Singleton Pattern ensures that a class has only one instance and provides a global point of access to that instance.
     In this case, the FullList class is designed to have only one instance across the entire application. The single instance is stored in the static instance property, and it can be accessed globally.
-    Static instance property:
-
-    2. static instance: FullList = new FullList();
-    => This line ensures that a single instance of the FullList class is created when the class is first loaded. Since the instance property is static, it belongs to the class itself, not to any specific object of the class.
+    
+    2. Static instance property:
+    => static instance: FullList = new FullList();
+    This line ensures that a single instance of the FullList class is created when the class is first loaded. Since the instance property is static, it belongs to the class itself, not to any specific object of the class.
     => The new FullList() creates the instance and assigns it to the instance property, which can be accessed via FullList.instance.
-    Private Constructor:
-
-    3. private constructor(private _list: List[] = []) {}
-    => The constructor is marked as private, which prevents any other code from using new FullList() to create additional instances of the class. This restriction ensures that only the single instance stored in FullList.instance can exist.
+    
+    3. Private Constructor:
+    => private constructor(private _list: List[] = []) {}
+    The constructor is marked as private, which prevents any other code from using new FullList() to create additional instances of the class. This restriction ensures that only the single instance stored in FullList.instance can exist.
     => The constructor also initializes the private _list array (which presumably stores a list of items of type List).
 
     **Explanation of How It Works**:

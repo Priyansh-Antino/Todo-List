@@ -142,6 +142,17 @@ section {
     color: red;
 }
 
+.empty-list-heading{
+    font-size: 3rem;
+    text-align: center;
+    margin: auto 0;
+    color: white;
+}
+
+.hide{
+    display: none;
+}
+
 @media (min-width: 768px) {
     section {
         padding: 1rem;

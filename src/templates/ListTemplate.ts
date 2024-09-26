@@ -22,6 +22,15 @@ export default class ListTemplate implements DOMList {
   render(fullList: FullList): void {
     this.clear();
 
+    const emptyHeading = document.querySelector(
+      ".empty-list-heading"
+    ) as HTMLHeadingElement;
+    if (fullList.list.length === 0) {
+      emptyHeading.classList.remove("hide");
+    } else {
+      emptyHeading.classList.add("hide");
+    }
+
     fullList.list.forEach((item) => {
       const li = document.createElement("li") as HTMLLIElement;
       li.className = "item";
@@ -60,5 +69,13 @@ export default class ListTemplate implements DOMList {
 
   clear(): void {
     this.ul.innerHTML = "";
+    const emptyHeading = document.querySelector(
+      ".empty-list-heading"
+    ) as HTMLHeadingElement;
+    if (this.ul.children.length === 0) {
+      emptyHeading.classList.remove("hide");
+    } else {
+      emptyHeading.classList.add("hide");
+    }
   }
 }
